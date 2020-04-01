@@ -1,0 +1,13 @@
+**/node_modules
+log
+.env
+bower_components
+.DS_Store
+package-lock.json
+
+yarn.lock
+
+report.*
+
+yarn-error.log
+
