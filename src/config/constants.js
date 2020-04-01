@@ -1,14 +1,14 @@
 const devConfig = {
-  MONGO_URL: "mongodb://localhost/veritydb",
-  JWT_SECRET: "promiseizuagbala",
+  MONGO_URL: 'mongodb://localhost/tr1ppdb',
+  JWT_SECRET: 'promiseizuagbala',
 };
 
 const testConfig = {
-  MONGO_URL: "mongodb://localhost/veritydb-test",
+  MONGO_URL: 'mongodb://localhost/tr1ppdb-test',
 };
 
 const prodConfig = {
-  MONGO_URL: "mongodb://localhost/veritydb-prod",
+  MONGO_URL: 'mongodb://localhost/tr1ppdb-prod',
 };
 
 const defaultConfig = {
@@ -17,10 +17,10 @@ const defaultConfig = {
 
 function envConfig(env) {
   switch (env) {
-    case "development":
+    case 'development':
       return devConfig;
 
-    case "test":
+    case 'test':
       return testConfig;
     default:
       return prodConfig;
