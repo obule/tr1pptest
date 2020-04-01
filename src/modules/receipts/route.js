@@ -16,8 +16,8 @@ routes.post(
   ReceiptsController.getSalesByMonth,
 );
 routes.post(
-  '/get-month-sales',
-  // validate(ReceiptsValidation.getSalesByMonth),
+  '/get-monthly-sales',
+  validate(ReceiptsValidation.getMonthlySalesByProduct),
   ReceiptsController.getMonthlySalesByProduct,
 );
 

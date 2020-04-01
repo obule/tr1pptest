@@ -726,9 +726,7 @@ const routes = new _express.Router();
 
 routes.post('/', (0, _expressValidation2.default)(_validation2.default.addReceipt), ReceiptsController.addReceipt);
 routes.post('/get-sales', (0, _expressValidation2.default)(_validation2.default.getSalesByMonth), ReceiptsController.getSalesByMonth);
-routes.post('/get-month-sales',
-// validate(ReceiptsValidation.getSalesByMonth),
-ReceiptsController.getMonthlySalesByProduct);
+routes.post('/get-monthly-sales', (0, _expressValidation2.default)(_validation2.default.getMonthlySalesByProduct), ReceiptsController.getMonthlySalesByProduct);
 
 exports.default = routes;
 
@@ -770,6 +768,11 @@ exports.default = {
   getSalesByMonth: {
     body: {
       monthYear: ExtendededJoi.date().format('MMMM YYYY').raw().required()
+    }
+  },
+  getMonthlySalesByProduct: {
+    body: {
+      name: _joi2.default.string().required()
     }
   }
 };

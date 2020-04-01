@@ -28,4 +28,9 @@ export default {
         .required(),
     },
   },
+  getMonthlySalesByProduct: {
+    body: {
+      name: Joi.string().required(),
+    },
+  },
 };
